@@ -10,19 +10,23 @@ body {
   color: white;
   font-weight: lighter;
 }
+body .background-img {
+  background-size: auto;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body h1 {
   font-size: 48px;
 }
 body h2 {
   font-size: 36px;
   font-weight: lighter;
-  line-height: 26px;
   text-align: center;
 }
 body h4 {
   font-size: 22px;
-  letter-spacing: 6.82px;
-  line-height: 26px;
   font-weight: 400;
   text-align: center;
 }
@@ -49,12 +53,22 @@ body .btn i {
   color: white;
   font-size: 15px;
 }
+body .btn:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #bbe4e9;
+  font-weight: bold;
+}
 body a {
   font-family: "Aleo", serif;
   color: white;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+}
+body a:hover {
+  cursor: pointer;
+  color: yellow;
 }
 body p {
   letter-spacing: 1.5px;
@@ -67,25 +81,71 @@ body .p-cap {
 }
 
 .page-1 {
+  height: 100%;
+  width: 100%;
+}
+.page-1 .background-img1 {
   background-image: url(../assets/background-img1.png);
-  outline: 2px solid black;
-  padding: 20em;
-  height: 80vh;
-  width: 100vw;
-  background-repeat: no-repeat;
+  background-size: auto;
+  height: 90%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  display: grid;
+  display: flex;
   justify-content: center;
-  grid-template-areas: "form" "scroll" "hero-nav";
 }
-.page-1 .content-text1 {
+.page-1 .background-img1 img {
+  display: block;
+}
+.page-1 .background-img1 .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.page-1 .background-img1 .content-wrapper .content-text1 {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.page-1 .form-box {
+.page-1 .background-img1 .content-wrapper .form-box {
+  display: grid;
+  align-content: space-around;
+  width: 654px;
+  height: 67px;
+  background-color: white;
+}
+.page-1 .background-img1 .content-wrapper .form-box input {
+  float: left;
+  margin-left: 5px;
+  width: 400px;
+  height: 60px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+}
+.page-1 .background-img1 .content-wrapper .form-box .search-btn {
+  float: right;
+}
+.page-1 .background-img1 .content-wrapper .form-box .search-btn .fa-magnifying-glass {
+  color: white;
+  font-size: 25px;
+}
+.page-1 .background-img1 .content-wrapper .form-box .content-text1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-1 .background-img1 .content-wrapper .form-box .form-box {
   justify-self: center;
   display: flex;
   flex-direction: column;
@@ -93,23 +153,41 @@ body .p-cap {
   width: 654px;
   height: 65px;
 }
-.page-1 .form-box input {
+.page-1 .background-img1 .content-wrapper .form-box .form-box input {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  background-color: white;
+  text-align: center;
 }
-.page-1 .form-box .fa-magnifying-glass {
+.page-1 .background-img1 .content-wrapper .form-box .form-box input input:hover {
+  background-color: #bbe4e9;
+  cursor: pointer;
+}
+.page-1 .background-img1 .content-wrapper .form-box .form-box .fa-magnifying-glass {
   color: white;
   font-size: 25px;
 }
-.page-1 .scroll {
+.page-1 .background-img1 .content-wrapper .form-box .scroll {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
 }
+.page-1 .background-img1 .content-wrapper .scroll {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.page-1 .background-img1 .content-wrapper .scroll a {
+  cursor: pointer;
+}
 
 .hero-nav {
+  grid-row-start: 4;
+  grid-row-end: 5;
   margin: 0;
   padding: 0;
   background-color: #5474FD;
@@ -136,13 +214,14 @@ body .p-cap {
   text-transform: uppercase;
 }
 
-.page-2 {
+.page-2 .background-img2 {
   background-image: url(../assets/background-img2.png);
-  outline: 2px solid black;
-  padding: 20em;
-  height: 90vh;
-  width: 100vw;
-  background-repeat: no-repeat;
+  height: 90%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 .page-2 .icons-page2 {
   display: flex;
@@ -166,15 +245,13 @@ body .p-cap {
 .page-2 .icons-page2 div .fa-thumbs-up {
   color: #5474FD;
 }
-.page-2 .icons-page2 h2 {
+.page-2 .icons-page2 div h2 {
   font-family: "Aleo", serif;
   font-weight: lighter;
 }
 
 .page-3 {
   background-image: url(../assets/background-img3.png);
-  outline: 2px solid black;
-  padding: 20em;
   height: 50vh;
   width: 100vw;
   background-repeat: no-repeat;
@@ -182,8 +259,6 @@ body .p-cap {
 
 .page-4 {
   background-image: url(../assets/background-img4.png);
-  outline: 2px solid black;
-  padding: 20em;
   height: 50vh;
   width: 100vw;
   background-repeat: no-repeat;
@@ -191,8 +266,6 @@ body .p-cap {
 
 .page-5 {
   background-image: url(../assets/background-img5.png);
-  outline: 2px solid black;
-  padding: 20em;
   height: 70vh;
   width: 100vw;
   background-repeat: no-repeat;
