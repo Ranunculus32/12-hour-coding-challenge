@@ -1,22 +1,17 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
+/**********GENERAL STYLE********************/
 body {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
   color: white;
   font-weight: lighter;
-}
-body .page-1, body .page-2, body .page-3, body .page-4, body .page-5 {
-  background-size: auto;
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 body h1 {
   font-size: 3rem;
@@ -44,11 +39,11 @@ body .btn {
   color: white;
   font-size: 0.9rem;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.6rem;
   letter-spacing: 1.4px;
   text-align: center;
-  width: 228px;
-  height: 63px;
+  width: 14.25rem;
+  height: 3.9rem;
   background-color: #5474FD;
   border: none;
 }
@@ -79,22 +74,22 @@ body .p-cap {
   font-size: 1.25;
 }
 body .box {
-  width: 33rem;
-  height: 23rem;
+  width: 24rem;
+  height: 20rem;
   background-color: #232323;
-  opacity: 0.9;
+  opacity: 0.8;
   display: flex;
   justify-content: center;
   flex-direction: column;
   line-height: 1.6rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
+/**********SPECIFIC STYLE ************************/
 .page-1 {
   height: 100vh;
   width: 100vw;
   background-image: url(../assets/background-img1.png);
-  background-size: auto;
 }
 .page-1 .background-img1 {
   height: 90%;
@@ -169,6 +164,7 @@ body .box {
   width: max-content;
   background-color: white;
   text-align: center;
+  border: none;
 }
 .page-1 .background-img1 .content-wrapper .form-box .form-box input input:hover {
   background-color: #bbe4e9;
@@ -196,8 +192,6 @@ body .box {
 }
 
 .navbar {
-  grid-row-start: 4;
-  grid-row-end: 5;
   background-color: #5474FD;
   width: 100vw;
   height: 10vh;
@@ -278,55 +272,84 @@ body .box {
   }
 }
 .page-2 {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 80%;
+}
+.page-2 .container {
   background-image: url(../assets/background-img2.png);
-}
-.page-2 .page-2-content-wrapper {
-  width: 80vw;
-  height: 70vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-.page-2 .page-2-content-wrapper .page2-text {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 60%;
-  height: 100%;
-}
-.page-2 .page-2-content-wrapper .img-container {
-  display: flex;
-}
-.icon-wrapper {
-  background-color: #333333;
-  height: 30vh;
+  padding: 2rem;
+  margin: auto;
   width: 100vw;
+  height: 80vh;
+}
+.page-2 .page2-content-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.page-2 .page2-content-wrapper .page2-text {
+  width: 35%;
+  height: 80%;
+  background-color: transparent;
+}
+.page-2 .page2-content-wrapper .page2-text h2 {
+  text-align: start;
+}
+.page-2 .page2-content-wrapper .img-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+  width: 35%;
+  height: 80%;
+}
+.page-2 .page2-content-wrapper .img-container .page2-img1 {
+  align-self: flex-start;
+}
+.page-2 .page2-content-wrapper .img-container .page2-img2 {
+  align-self: flex-end;
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-areas: "wrapper img1" "wrapper img1" "wrapper img2" "wrapper img2" "icons icons";
+  }
+}
+.icons-page2 {
+  background-color: #333333;
+  height: 20%;
+  width: 100%;
+  padding: 0;
+  margin: aut0;
+  align-content: space-between;
+}
+.icons-page2 .icon-wrapper {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
 }
-.icon-wrapper .icons-page2 {
-  align-content: space-between;
-}
-.icon-wrapper .icons-page2 .icon1, .icon-wrapper .icons-page2 .icon2, .icon-wrapper .icons-page2 .icon3 {
+.icons-page2 .icon1, .icons-page2 .icon2, .icons-page2 .icon3 {
   display: flex;
   justify-content: space-between;
   align-content: center;
   flex-direction: column;
 }
-.icon-wrapper .icons-page2 h2 {
+.icons-page2 h2 {
   font-family: "Aleo", serif;
   font-weight: lighter;
 }
-.icon-wrapper i {
+.icons-page2 i {
   font-size: 5rem;
+}
+
+.process-container {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .fa-magnifying-glass {
