@@ -91,9 +91,14 @@ body {
     padding: 1rem;
   }
   .fa {
-    color: white;
+    color: blue;
   }
+  
 }
+.fa-brands:hover {
+  color: white;
+}
+
 /***** LOGIN AND REGISTER ******/
 .user-form {
   input {
@@ -273,6 +278,10 @@ body {
 nav .sticky {
   position: fixed;
   background-color: rgba(84, 116, 253, 0.9);
+}
+.logo {
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 .navbar {
   background-color: #5474fd;
@@ -542,7 +551,7 @@ footer {
   .fa {
     font-size: 1.2rem;
   }
-  .fa:hover {
-    color: seagreen;
+  .fa-brands:hover {
+    color: white;
   }
 }

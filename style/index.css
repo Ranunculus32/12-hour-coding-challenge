@@ -90,6 +90,10 @@ body .box {
   padding: 1rem;
 }
 body .fa {
+  color: blue;
+}
+
+.fa-brands:hover {
   color: white;
 }
 
@@ -271,6 +275,11 @@ body footer {
 nav .sticky {
   position: fixed;
   background-color: rgba(84, 116, 253, 0.9);
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 .navbar {
@@ -533,6 +542,6 @@ footer .fa-linkedin {
 footer .fa {
   font-size: 1.2rem;
 }
-footer .fa:hover {
-  color: seagreen;
+footer .fa-brands:hover {
+  color: white;
 }/*# sourceMappingURL=index.css.map */
